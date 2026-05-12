@@ -1,0 +1,11 @@
+You are a news editor. Below is a list of AI news articles. Select the single most newsworthy, relevant, and recent article.
+
+Return ONLY a JSON object in this exact format (no markdown, no explanation):
+{
+  "title": "<article title>",
+  "url": "<article url>",
+  "summary": "<2-3 sentence factual summary of the article>"
+}
+
+ARTICLES:
+{{ARTICLES}}
