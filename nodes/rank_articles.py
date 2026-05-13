@@ -4,19 +4,15 @@ from pathlib import Path
 
 from openai import OpenAI
 
+import os
+
 from schemas.ranked_article import RankedArticle
 from state import PosterState
+from llm_client.openai import _get_openai_client
 
 logger = logging.getLogger(__name__)
 
 _PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "rank.txt"
-
-
-def _get_client() -> OpenAI:
-    return OpenAI(
-        base_url=os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434") + "/v1",
-        api_key=os.environ.get("OLLAMA_API_KEY", "ollama"),
-    )
 
 
 def rank_articles(state: PosterState) -> dict:
@@ -32,12 +28,14 @@ def rank_articles(state: PosterState) -> dict:
     )
     prompt = template.replace("{{ARTICLES}}", articles_text)
 
-    client = _get_client()
+    client = _get_openai_client()
+
     response = client.beta.chat.completions.parse(
-        model=os.environ.get("OLLAMA_MODEL", "qwen3:8b"),
+        model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
         messages=[{"role": "user", "content": prompt}],
-        response_format=RankedArticle,
+        response_format=RankedArticle
     )
+
     ranked: RankedArticle = response.choices[0].message.parsed
     logger.info("Ranked article: %s", ranked.title)
     return {"ranked_article": ranked.model_dump()}
