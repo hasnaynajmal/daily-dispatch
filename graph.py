@@ -7,7 +7,7 @@ from nodes.write_post import write_post
 from nodes.review_agent import review_agent, route_review
 from nodes.notify_telegram import notify_telegram
 from nodes.post_linkedin import post_linkedin
-
+import os
 
 def build_graph() -> StateGraph:
     graph = StateGraph(PosterState)
@@ -34,7 +34,15 @@ def build_graph() -> StateGraph:
         },
     )
 
-    graph.add_edge("notify_telegram", "post_linkedin")
+    graph.add_conditional_edges(
+    "notify_telegram",
+    lambda _: "post_linkedin" if os.getenv("POST_LINKEDIN", "false").lower() == "true" else "end",
+    {
+        "post_linkedin": "post_linkedin",
+        "end": END,
+    },
+)
+
     graph.add_edge("post_linkedin", END)
 
     return graph.compile()
