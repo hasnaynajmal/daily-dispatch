@@ -1,5 +1,10 @@
 [
   {
+    "title": "StepFun Step 5 Preview: 600B MoE Model with 1M Context and Vision Released for Free Preview · AIDev.news",
+    "summary": "StepFun has launched Step 5 Preview, a sparse Mixture-of-Experts model featuring 600 billion total parameters, 27 billion active parameters, vision support, and a 1-million-token context window. The model matches GPT-6 Luna with a 33.89 score on the Hermes Index and is available for free evaluation via Nous Portal for one week ahead of an open-weights release scheduled for October 15, 2026.",
+    "url": "https://www.aidev.news/article/stepfun-step-5-preview-600b-moe-model-with-1m-context-and-vision-released-for-free-preview"
+  },
+  {
     "title": "OpenAI Opens Agents API Public Beta: Codex Harness as a Service",
     "summary": "OpenAI has launched its Agents API in public beta, making the agent harness powering Codex available as a managed service without extra platform fees. The API includes native context compaction, tool search, programmatic tool calling, and subagent delegation across nine partner execution sandboxes. OpenAI has also made the underlying orchestration harness open source for developers to inspect and adapt.",
     "url": "https://diffvibe.com/articles/openai-opens-agents-api-public-beta-codex-harness-as-a-service-1c2b0156"
@@ -28,10 +33,5 @@
     "title": "The AI model 'Ornith-1.5' has been released, an open model that covers everything from large models like the Claude Opus 4.8 to lightweight models capable of running on smartphones.",
     "summary": "AI research group Ornith released Ornith-1.5, a new MIT-licensed family of open models spanning a 397B MoE model, a 35B MoE model with 3B active parameters, and a 9B dense model including a smartphone-targeted quantized variant. The release highlights a self-improvement training loop where models generate progressively harder tasks during training, and reports benchmark results competitive with leading proprietary and open models across coding and reasoning tasks.",
     "url": "https://gigazine.net/gsc_news/en/20260820-ornith-1-5/"
-  },
-  {
-    "title": "GLM-5.3: Frontier Coding with Emergent Cyber Capabilities",
-    "summary": "Z.ai released GLM-5.3, an upcoming open-weights model focused on coding, long-horizon agent tasks, and cybersecurity reasoning. The company reports large gains from post-training alone, including improved scores on Terminal-Bench 3.0, DeepSWE, and cyber exploitation benchmarks, alongside a new RL training stack and plans to release weights after additional safety evaluation.",
-    "url": "https://z.ai/blog/glm-5.3"
   }
 ]
