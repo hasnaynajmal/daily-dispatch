@@ -9,7 +9,7 @@ class PosterState(TypedDict):
     ranked_article: dict           # {title, url, summary}
 
     # Writing
-    draft_post: str                # current draft
+    draft_post: dict               # {hook, body, url}
     review_feedback: str           # reviewer's notes on last draft
     retry_count: int               # number of rewrite attempts
 

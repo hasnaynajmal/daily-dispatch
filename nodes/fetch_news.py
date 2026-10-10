@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import os
+from datetime import date
 
 import ollama
 
@@ -8,12 +9,17 @@ from state import PosterState
 
 logger = logging.getLogger(__name__)
 
-SEARCH_QUERIES = [
-    "new AI model release 2026",
-    "AI regulation policy news today",
-    "AI research paper published today",
-    "AI industry funding investment 2026",
+_QUERY_TEMPLATES = [
+    "new LLM or foundation model release for developers {date}",
+    "AI developer tools frameworks APIs released {date}",
+    "AI machine learning research paper breakthrough {date}",
+    "open source AI model release {date}",
 ]
+
+
+def _build_queries() -> list[str]:
+    today = date.today().strftime("%B %d, %Y")  # e.g. "May 13, 2026"
+    return [t.format(date=today) for t in _QUERY_TEMPLATES]
 
 
 def _get_client() -> ollama.Client:
@@ -43,7 +49,7 @@ async def _fetch_all() -> list[dict]:
     loop = asyncio.get_event_loop()
     tasks = [
         loop.run_in_executor(None, _search_one, client, q)
-        for q in SEARCH_QUERIES
+        for q in _build_queries()
     ]
     results = await asyncio.gather(*tasks)
     merged: list[dict] = []

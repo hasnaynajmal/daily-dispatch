@@ -1,12 +1,9 @@
 import logging
-import os
 from pathlib import Path
-
-from openai import OpenAI
 
 from schemas.review_result import ReviewResult
 from state import PosterState
-from llm_client.openai import _get_openai_client
+from llm_client.gemini import generate_structured
 
 logger = logging.getLogger(__name__)
 
@@ -15,7 +12,8 @@ _PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "review.txt"
 
 def review_agent(state: PosterState) -> dict:
     article = state["ranked_article"]
-    draft = state["draft_post"]
+    draft_dict = state["draft_post"]
+    draft = f"{draft_dict['hook']}\n\n{draft_dict['body']}\n\nLink: {draft_dict['url']}"
 
     template = _PROMPT_PATH.read_text(encoding="utf-8")
     prompt = (
@@ -26,16 +24,7 @@ def review_agent(state: PosterState) -> dict:
         .replace("{{DRAFT_POST}}", draft)
     )
 
-    client = _get_openai_client()
-
-    response = client.beta.chat.completions.parse(
-        model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-        messages=[{"role": "user", "content": prompt}],
-        response_format=ReviewResult
-    )
-
-
-    result: ReviewResult = response.choices[0].message.parsed
+    result = generate_structured(prompt, ReviewResult)
     logger.info("Review verdict: %s", result.verdict)
 
     if result.verdict == True:

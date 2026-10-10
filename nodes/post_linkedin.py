@@ -14,6 +14,7 @@ def post_linkedin(state: PosterState) -> dict:
     token = os.environ["LINKEDIN_ACCESS_TOKEN"]
     author_urn = os.environ["LINKEDIN_AUTHOR_URN"]
     post = state["draft_post"]
+    text = f"{post['hook']}\n\n{post['body']}\n\nLink: {post['url']}"
 
     headers = {
         "Authorization": f"Bearer {token}",
@@ -26,7 +27,7 @@ def post_linkedin(state: PosterState) -> dict:
         "specificContent": {
             "com.linkedin.ugc.ShareContent": {
                 "shareCommentary": {
-                    "text": post,
+                    "text": text,
                 },
                 "shareMediaCategory": "NONE",
             }

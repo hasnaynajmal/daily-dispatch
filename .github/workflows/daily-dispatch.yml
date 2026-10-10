@@ -1,0 +1,52 @@
+name: Daily Dispatch
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # 08:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-dispatch
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-flash-latest' }}
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          POST_LINKEDIN: ${{ vars.POST_LINKEDIN || 'false' }}
+        run: python main.py --once
+
+      - name: Persist article history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add last_article.json
+          if git diff --cached --quiet; then
+            echo "No history changes."
+          else
+            git commit -m "chore: update article history [skip ci]"
+            git push
+          fi

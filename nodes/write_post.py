@@ -1,10 +1,8 @@
 import logging
-import os
 from pathlib import Path
 
-from openai import OpenAI
-
-from llm_client.openai import _get_openai_client
+from llm_client.gemini import generate_structured
+from schemas.draft_post import DraftPost
 from state import PosterState
 
 logger = logging.getLogger(__name__)
@@ -24,12 +22,6 @@ def write_post(state: PosterState) -> dict:
         .replace("{{FEEDBACK}}", feedback or "None")
     )
 
-    client = _get_openai_client()
-    response = client.chat.completions.create(
-        model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-        messages=[{"role": "user", "content": prompt}],
-    )
-    
-    draft = response.choices[0].message.content.strip()
-    logger.info("Draft post written (%d chars).", len(draft))
-    return {"draft_post": draft}
+    result = generate_structured(prompt, DraftPost)
+    logger.info("Draft post written (hook: %d chars, body: %d chars).", len(result.hook), len(result.body))
+    return {"draft_post": result.model_dump()}

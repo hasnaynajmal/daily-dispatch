@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 from graph import build_graph
 from state import PosterState
-import sys
 
 load_dotenv()
 
@@ -39,8 +38,8 @@ def run_pipeline() -> None:
 
 
 if __name__ == "__main__":
-    if "--test" in sys.argv:
-        logger.info("Test mode: running pipeline once.")
+    if "--once" in sys.argv or "--test" in sys.argv:
+        logger.info("Running pipeline once.")
         run_pipeline()
     else:
         scheduler = BlockingScheduler(timezone="UTC")

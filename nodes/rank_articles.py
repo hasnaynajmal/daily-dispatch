@@ -1,14 +1,11 @@
 import logging
-import os
+from datetime import date
 from pathlib import Path
-
-from openai import OpenAI
-
-import os
 
 from schemas.ranked_article import RankedArticle
 from state import PosterState
-from llm_client.openai import _get_openai_client
+from llm_client.gemini import generate_structured
+from utils.last_article import load_recent_articles
 
 logger = logging.getLogger(__name__)
 
@@ -21,21 +18,29 @@ def rank_articles(state: PosterState) -> dict:
         logger.warning("No articles to rank.")
         return {"ranked_article": {}}
 
+    today = date.today().strftime("%B %d, %Y")
     template = _PROMPT_PATH.read_text(encoding="utf-8")
     articles_text = "\n\n".join(
         f"[{i + 1}] {a['title']}\n{a['url']}\n{a['snippet']}"
         for i, a in enumerate(articles)
     )
-    prompt = template.replace("{{ARTICLES}}", articles_text)
 
-    client = _get_openai_client()
+    recent = load_recent_articles()
+    if recent:
+        previous_text = "\n".join(
+            f"{i + 1}. Title: {a.get('title', '')}\n   URL: {a.get('url', '')}"
+            for i, a in enumerate(recent)
+        )
+    else:
+        previous_text = "None"
 
-    response = client.beta.chat.completions.parse(
-        model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-        messages=[{"role": "user", "content": prompt}],
-        response_format=RankedArticle
+    prompt = (
+        template
+        .replace("{{DATE}}", today)
+        .replace("{{ARTICLES}}", articles_text)
+        .replace("{{PREVIOUS_ARTICLE}}", previous_text)
     )
 
-    ranked: RankedArticle = response.choices[0].message.parsed
+    ranked = generate_structured(prompt, RankedArticle)
     logger.info("Ranked article: %s", ranked.title)
     return {"ranked_article": ranked.model_dump()}

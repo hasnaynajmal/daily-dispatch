@@ -13,7 +13,7 @@ This project is a LangGraph-powered pipeline that runs once a day. It searches t
 ## Architecture
 
 ```
-Daily Scheduler (cron / APScheduler)
+Daily Scheduler (GitHub Actions cron)
         │
         ├──────────────────────────────────────────┐
         │                                          │
@@ -50,7 +50,7 @@ Daily Scheduler (cron / APScheduler)
 ## Nodes
 
 ### 1. Daily Scheduler
-Triggers the entire pipeline once per day at a configured time (e.g. 08:00). Built with APScheduler or a simple cron job.
+Triggers the entire pipeline once per day at 08:00 UTC via the GitHub Actions workflow in `.github/workflows/daily-dispatch.yml`. Running `python main.py` locally (no flags) uses APScheduler instead; `python main.py --once` runs a single pass.
 
 ### 2. Fetch Nodes (×4, parallel)
 Four independent search nodes run concurrently via `asyncio`. Each targets a different angle of AI news using the **Ollama Web Search API** (`ollama.com/api/web_search`):
@@ -65,10 +65,10 @@ Four independent search nodes run concurrently via `asyncio`. Each targets a dif
 Each node returns a list of articles with `title`, `url`, and `snippet`. All results are merged into the shared LangGraph state.
 
 ### 3. `rank_articles` Node
-A local Ollama LLM (e.g. `qwen3:8b`) scores all fetched articles across all 4 search lanes. It selects the single most newsworthy, relevant, and recent article. The winner — `{title, url, summary}` — is written to state.
+Gemini scores all fetched articles across all 4 search lanes. It selects the single most newsworthy, relevant, and recent article. The winner — `{title, url, summary}` — is written to state.
 
 ### 4. `write_post` Node
-A local Ollama LLM writes one short LinkedIn post from the ranked article. The post format is fixed:
+Gemini writes one short LinkedIn post from the ranked article. The post format is fixed:
 
 ```
 [Audience hook]: [Source] reports [key insight]. [One-line takeaway].
@@ -88,7 +88,7 @@ Link: https://reuters.com/...
 The post is stored in state as `draft_post`.
 
 ### 5. `review_agent` Node
-An LLM reviewer sees both the original article and the draft post side by side. It checks:
+A Gemini reviewer sees both the original article and the draft post side by side. It checks:
 
 - **Accuracy** — does the post faithfully reflect the article? No hallucinated claims.
 - **Tone** — appropriate for a professional LinkedIn audience.
@@ -138,9 +138,9 @@ class PosterState(TypedDict):
 | Component | Tool |
 |---|---|
 | Agent framework | LangGraph |
-| LLM (local) | Ollama (`qwen3:8b` or `llama3.1:8b`) |
+| LLM | Google Gemini (`google-genai`, structured output) |
 | Web search | Ollama Web Search API |
-| Scheduler | APScheduler |
+| Scheduler | GitHub Actions cron (APScheduler for local runs) |
 | LinkedIn | LinkedIn REST API v2 |
 | Telegram | Telegram Bot API |
 | Language | Python 3.11+ |
@@ -151,11 +151,15 @@ class PosterState(TypedDict):
 ## Environment Variables
 
 ```env
-# Ollama
-OLLAMA_API_KEY=your_ollama_api_key
-OLLAMA_BASE_URL=http://localhost:11434
+# Gemini
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=gemini-flash-latest
 
-# LinkedIn
+# Ollama (web search only)
+OLLAMA_API_KEY=your_ollama_api_key
+
+# LinkedIn (set POST_LINKEDIN=true to publish)
+POST_LINKEDIN=false
 LINKEDIN_ACCESS_TOKEN=your_linkedin_oauth_token
 LINKEDIN_AUTHOR_URN=urn:li:person:YOUR_ID
 
@@ -166,13 +170,30 @@ TELEGRAM_CHAT_ID=your_personal_chat_id
 
 ---
 
+## Deployment (GitHub Actions)
+
+The workflow `.github/workflows/daily-dispatch.yml` runs the pipeline daily at 08:00 UTC and can also be triggered manually from the **Actions** tab (`workflow_dispatch`). After each run it commits `last_article.json` back to the repo so the ranker remembers recently posted articles.
+
+In **Settings → Secrets and variables → Actions**, add:
+
+| Type | Name |
+|---|---|
+| Secret | `GEMINI_API_KEY`, `OLLAMA_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_AUTHOR_URN` |
+| Variable (optional) | `GEMINI_MODEL` (default `gemini-flash-latest`), `POST_LINKEDIN` (default `false`) |
+
+GitHub cron runs can start a few minutes late, and scheduled workflows are disabled after 60 days of no repository activity (the daily history commit keeps it active).
+
+---
+
 ## Project Structure
 
 ```
 linkedin-ai-poster/
 ├── README.md
 ├── .env
-├── main.py                  # entry point, scheduler setup
+├── main.py                  # entry point (--once for a single run)
+├── .github/workflows/       # daily GitHub Actions cron
+├── llm_client/gemini.py     # Gemini structured-output helper
 ├── graph.py                 # LangGraph graph definition + edges
 ├── state.py                 # PosterState TypedDict
 ├── nodes/
@@ -193,7 +214,7 @@ linkedin-ai-poster/
 
 ## Flow Summary
 
-1. Scheduler fires at 08:00
+1. GitHub Actions fires at 08:00 UTC
 2. 4 search nodes run in parallel → ~8–16 articles collected
 3. Ranker picks the single best article
 4. Writer produces a short post (2–4 sentences + link)

@@ -1,0 +1,37 @@
+[
+  {
+    "title": "OpenAI Opens Agents API Public Beta: Codex Harness as a Service",
+    "summary": "OpenAI has launched its Agents API in public beta, making the agent harness powering Codex available as a managed service without extra platform fees. The API includes native context compaction, tool search, programmatic tool calling, and subagent delegation across nine partner execution sandboxes. OpenAI has also made the underlying orchestration harness open source for developers to inspect and adapt.",
+    "url": "https://diffvibe.com/articles/openai-opens-agents-api-public-beta-codex-harness-as-a-service-1c2b0156"
+  },
+  {
+    "title": "studio-dots-ai/dots3-note-prev",
+    "summary": "dots studio released dots3-note preview, an Apache 2.0 open-weight multimodal Mixture-of-Experts model with 280B total parameters, 16B active parameters, and 512K context support. The model accepts text, image, video, and audio inputs, includes FP8 checkpoints and deployment recipes for vLLM and SGLang, and targets agent workflows, coding, long-context reasoning, and multimodal understanding.",
+    "url": "https://github.com/studio-dots-ai/dots3-note-prev"
+  },
+  {
+    "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+    "summary": "Liquid AI released open DSpark draft model checkpoints for the LFM2.5 family, enabling speculative decoding with up to 3.18x inference throughput gains on H100 GPUs and major latency reductions on edge devices such as Apple M4 Max systems. The release includes upstream support for llama.cpp and SGLang, maintains output parity with baseline greedy decoding, and targets faster agentic and function-calling workloads without retraining the base models.",
+    "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark"
+  },
+  {
+    "title": "Build production agents with computer use, the Skills API, and the Files API | Claude by Anthropic",
+    "summary": "Anthropic announced general availability for its computer use, Skills API, and Files API on the Claude Platform, alongside a new browser use tool for web automation agents. The update adds multi-action turns for computer use, hosted reusable skills executed in Claude’s sandbox, persistent file storage APIs, and higher storage and rate limits, targeting production deployment of agentic workflows and enterprise automation systems.",
+    "url": "https://claude.com/blog/computer-use-skills-api-files-api"
+  },
+  {
+    "title": "Qwen3.6-35B-A3B open-weight model released with 262K context and multimodal agent support",
+    "summary": "Qwen has released Qwen3.6-35B-A3B, an open-weight multimodal MoE model with 35B total parameters and 3B active parameters, targeting coding agents, tool use, long-context reasoning, and multimodal workflows. The release includes native support for up to 262K context length (extendable to roughly 1M tokens with YaRN), OpenAI-compatible serving examples for vLLM and SGLang, and benchmark results across SWE-bench, Terminal-Bench, GPQA, multimodal, and video understanding tasks.",
+    "url": "https://huggingface.co/unconstai/20260818-215141"
+  },
+  {
+    "title": "The AI model 'Ornith-1.5' has been released, an open model that covers everything from large models like the Claude Opus 4.8 to lightweight models capable of running on smartphones.",
+    "summary": "AI research group Ornith released Ornith-1.5, a new MIT-licensed family of open models spanning a 397B MoE model, a 35B MoE model with 3B active parameters, and a 9B dense model including a smartphone-targeted quantized variant. The release highlights a self-improvement training loop where models generate progressively harder tasks during training, and reports benchmark results competitive with leading proprietary and open models across coding and reasoning tasks.",
+    "url": "https://gigazine.net/gsc_news/en/20260820-ornith-1-5/"
+  },
+  {
+    "title": "GLM-5.3: Frontier Coding with Emergent Cyber Capabilities",
+    "summary": "Z.ai released GLM-5.3, an upcoming open-weights model focused on coding, long-horizon agent tasks, and cybersecurity reasoning. The company reports large gains from post-training alone, including improved scores on Terminal-Bench 3.0, DeepSWE, and cyber exploitation benchmarks, alongside a new RL training stack and plans to release weights after additional safety evaluation.",
+    "url": "https://z.ai/blog/glm-5.3"
+  }
+]
