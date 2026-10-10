@@ -1,5 +1,10 @@
 [
   {
+    "title": "Tsinghua Shenzhen releases VeriLoop E2, a 27B model with evidence-governed reasoning for code and science – FreeLLM",
+    "summary": "Tsinghua University's Shenzhen International Graduate School has released VeriLoop E2, an open-weight 27-billion parameter model licensed under Apache 2.0 for software engineering, mathematics, and physics. The system introduces VeriLoop-Governed Recurrence, separating candidate generation from deterministic external verification so reasoning progress is retained only when evidence improves. Compatible with vLLM serving, the model supports a 262K context window and scores 76.2% on SWE-bench Pro alongside 98.3% on AIME 2026.",
+    "url": "https://freellm.vip/news/tsinghua-shenzhen-releases-veriloop-e2-a-27b-model-with-evidence-governed-reasoning-for-code-and-science"
+  },
+  {
     "title": "StepFun Step 5 Preview: 600B MoE Model with 1M Context and Vision Released for Free Preview · AIDev.news",
     "summary": "StepFun has launched Step 5 Preview, a sparse Mixture-of-Experts model featuring 600 billion total parameters, 27 billion active parameters, vision support, and a 1-million-token context window. The model matches GPT-6 Luna with a 33.89 score on the Hermes Index and is available for free evaluation via Nous Portal for one week ahead of an open-weights release scheduled for October 15, 2026.",
     "url": "https://www.aidev.news/article/stepfun-step-5-preview-600b-moe-model-with-1m-context-and-vision-released-for-free-preview"
@@ -28,10 +33,5 @@
     "title": "Qwen3.6-35B-A3B open-weight model released with 262K context and multimodal agent support",
     "summary": "Qwen has released Qwen3.6-35B-A3B, an open-weight multimodal MoE model with 35B total parameters and 3B active parameters, targeting coding agents, tool use, long-context reasoning, and multimodal workflows. The release includes native support for up to 262K context length (extendable to roughly 1M tokens with YaRN), OpenAI-compatible serving examples for vLLM and SGLang, and benchmark results across SWE-bench, Terminal-Bench, GPQA, multimodal, and video understanding tasks.",
     "url": "https://huggingface.co/unconstai/20260818-215141"
-  },
-  {
-    "title": "The AI model 'Ornith-1.5' has been released, an open model that covers everything from large models like the Claude Opus 4.8 to lightweight models capable of running on smartphones.",
-    "summary": "AI research group Ornith released Ornith-1.5, a new MIT-licensed family of open models spanning a 397B MoE model, a 35B MoE model with 3B active parameters, and a 9B dense model including a smartphone-targeted quantized variant. The release highlights a self-improvement training loop where models generate progressively harder tasks during training, and reports benchmark results competitive with leading proprietary and open models across coding and reasoning tasks.",
-    "url": "https://gigazine.net/gsc_news/en/20260820-ornith-1-5/"
   }
 ]
