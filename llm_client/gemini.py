@@ -7,11 +7,21 @@ from pydantic import BaseModel
 
 T = TypeVar("T", bound=BaseModel)
 
-DEFAULT_MODEL = "gemini-flash-latest"
+DEFAULT_MODEL = "gemini-flash-lite-latest"
 
 
 def _get_gemini_client() -> genai.Client:
-    return genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    # Retry transient overload/rate-limit errors with exponential backoff.
+    retry = types.HttpRetryOptions(
+        attempts=5,
+        initial_delay=5,
+        max_delay=60,
+        http_status_codes=[429, 500, 503, 504],
+    )
+    return genai.Client(
+        api_key=os.environ["GEMINI_API_KEY"],
+        http_options=types.HttpOptions(retry_options=retry),
+    )
 
 
 def generate_structured(prompt: str, schema: type[T]) -> T:

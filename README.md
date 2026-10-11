@@ -153,7 +153,7 @@ class PosterState(TypedDict):
 ```env
 # Gemini
 GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-flash-latest
+GEMINI_MODEL=gemini-flash-lite-latest
 
 # Ollama (web search only)
 OLLAMA_API_KEY=your_ollama_api_key
@@ -179,7 +179,7 @@ In **Settings → Secrets and variables → Actions**, add:
 | Type | Name |
 |---|---|
 | Secret | `GEMINI_API_KEY`, `OLLAMA_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_AUTHOR_URN` |
-| Variable (optional) | `GEMINI_MODEL` (default `gemini-flash-latest`), `POST_LINKEDIN` (default `false`) |
+| Variable (optional) | `GEMINI_MODEL` (default `gemini-flash-lite-latest`), `POST_LINKEDIN` (default `false`) |
 
 GitHub cron runs can start a few minutes late, and scheduled workflows are disabled after 60 days of no repository activity (the daily history commit keeps it active).
 
