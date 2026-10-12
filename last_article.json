@@ -1,5 +1,10 @@
 [
   {
+    "title": "Nvidia releases Kumo Tabular, an open foundation model for tabular prediction",
+    "summary": "Nvidia has released Kumo Tabular, an open foundation model for tabular data that performs zero-shot classification and regression in a single forward pass without the need for manual feature engineering or retraining. Available on Hugging Face under an open commercial license, the Transformer-based models leverage column, row, and in-context attention to bypass traditional gradient-boosted tree workflows. Evaluations show it ranking competitively on major tabular benchmarks while offering substantial inference speedups.",
+    "url": "https://bytejournal.org/news/2026-10-12-nvidia-releases-kumo-tabular-an-open-foundation-model-for-tabular-pred/"
+  },
+  {
     "title": "Meta Releases Llama 4 Scout: Frontier Open-Weights Mixture-of-Depths Architecture with Native 1M-Token Context Window",
     "summary": "Meta FAIR has released Llama 4 Scout, a 105B total parameter model utilizing dynamic Mixture-of-Depths routing with 24B active parameters per token. It supports a native 1M-token context window with zero RoPE-frequency degradation and is available on Hugging Face with native runtime integration.",
     "url": "https://dev.to/techboss/meta-releases-llama-4-scout-frontier-open-weights-mixture-of-depths-architecture-with-native-cgl"
@@ -28,10 +33,5 @@
     "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
     "summary": "Liquid AI released open DSpark draft model checkpoints for the LFM2.5 family, enabling speculative decoding with up to 3.18x inference throughput gains on H100 GPUs and major latency reductions on edge devices such as Apple M4 Max systems. The release includes upstream support for llama.cpp and SGLang, maintains output parity with baseline greedy decoding, and targets faster agentic and function-calling workloads without retraining the base models.",
     "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark"
-  },
-  {
-    "title": "Build production agents with computer use, the Skills API, and the Files API | Claude by Anthropic",
-    "summary": "Anthropic announced general availability for its computer use, Skills API, and Files API on the Claude Platform, alongside a new browser use tool for web automation agents. The update adds multi-action turns for computer use, hosted reusable skills executed in Claude’s sandbox, persistent file storage APIs, and higher storage and rate limits, targeting production deployment of agentic workflows and enterprise automation systems.",
-    "url": "https://claude.com/blog/computer-use-skills-api-files-api"
   }
 ]
