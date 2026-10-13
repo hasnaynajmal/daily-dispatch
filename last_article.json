@@ -1,5 +1,10 @@
 [
   {
+    "title": "Introducing Superfluid: the local-AI native LLM server for multi-agent inference - DEV Community",
+    "summary": "Superfluid is a new open-source (Apache-2.0) local LLM inference server built specifically for running multiple agent workloads concurrently on a single machine. It features preemption for interactive chat requests, zero-loss logging to survive worker crashes, shared prompt caching, and multi-device private fleet networking.",
+    "url": "https://dev.to/prabod_bc/introducing-superfluid-the-local-ai-native-llm-server-for-multi-agent-inference-26mh"
+  },
+  {
     "title": "Nvidia releases Kumo Tabular, an open foundation model for tabular prediction",
     "summary": "Nvidia has released Kumo Tabular, an open foundation model for tabular data that performs zero-shot classification and regression in a single forward pass without the need for manual feature engineering or retraining. Available on Hugging Face under an open commercial license, the Transformer-based models leverage column, row, and in-context attention to bypass traditional gradient-boosted tree workflows. Evaluations show it ranking competitively on major tabular benchmarks while offering substantial inference speedups.",
     "url": "https://bytejournal.org/news/2026-10-12-nvidia-releases-kumo-tabular-an-open-foundation-model-for-tabular-pred/"
@@ -28,10 +33,5 @@
     "title": "studio-dots-ai/dots3-note-prev",
     "summary": "dots studio released dots3-note preview, an Apache 2.0 open-weight multimodal Mixture-of-Experts model with 280B total parameters, 16B active parameters, and 512K context support. The model accepts text, image, video, and audio inputs, includes FP8 checkpoints and deployment recipes for vLLM and SGLang, and targets agent workflows, coding, long-context reasoning, and multimodal understanding.",
     "url": "https://github.com/studio-dots-ai/dots3-note-prev"
-  },
-  {
-    "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
-    "summary": "Liquid AI released open DSpark draft model checkpoints for the LFM2.5 family, enabling speculative decoding with up to 3.18x inference throughput gains on H100 GPUs and major latency reductions on edge devices such as Apple M4 Max systems. The release includes upstream support for llama.cpp and SGLang, maintains output parity with baseline greedy decoding, and targets faster agentic and function-calling workloads without retraining the base models.",
-    "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark"
   }
 ]
