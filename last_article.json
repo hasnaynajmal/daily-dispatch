@@ -1,5 +1,10 @@
 [
   {
+    "title": "UltraBERT: One Encoder for Classification and Retrieval",
+    "summary": "Researchers released UltraBERT, a new family of English encoders featuring native 32K context lengths and a decoupled dual-head architecture that overcomes the historical trade-off between classification and retrieval performance. The release includes pre-trained encoders at 150M and 380M parameters alongside an embedder model that scores top marks on MTEB.",
+    "url": "https://ofia-docs.france-ioi.org/huggingface/blog/dmis-lab/ultrabert"
+  },
+  {
     "title": "Introducing Superfluid: the local-AI native LLM server for multi-agent inference - DEV Community",
     "summary": "Superfluid is a new open-source (Apache-2.0) local LLM inference server built specifically for running multiple agent workloads concurrently on a single machine. It features preemption for interactive chat requests, zero-loss logging to survive worker crashes, shared prompt caching, and multi-device private fleet networking.",
     "url": "https://dev.to/prabod_bc/introducing-superfluid-the-local-ai-native-llm-server-for-multi-agent-inference-26mh"
@@ -28,10 +33,5 @@
     "title": "OpenAI Opens Agents API Public Beta: Codex Harness as a Service",
     "summary": "OpenAI has launched its Agents API in public beta, making the agent harness powering Codex available as a managed service without extra platform fees. The API includes native context compaction, tool search, programmatic tool calling, and subagent delegation across nine partner execution sandboxes. OpenAI has also made the underlying orchestration harness open source for developers to inspect and adapt.",
     "url": "https://diffvibe.com/articles/openai-opens-agents-api-public-beta-codex-harness-as-a-service-1c2b0156"
-  },
-  {
-    "title": "studio-dots-ai/dots3-note-prev",
-    "summary": "dots studio released dots3-note preview, an Apache 2.0 open-weight multimodal Mixture-of-Experts model with 280B total parameters, 16B active parameters, and 512K context support. The model accepts text, image, video, and audio inputs, includes FP8 checkpoints and deployment recipes for vLLM and SGLang, and targets agent workflows, coding, long-context reasoning, and multimodal understanding.",
-    "url": "https://github.com/studio-dots-ai/dots3-note-prev"
   }
 ]
