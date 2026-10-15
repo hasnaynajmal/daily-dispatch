@@ -1,5 +1,10 @@
 [
   {
+    "title": "HybridAgent toggles latent reasoning with tools, cuts cost 3.7x | AI Weekly",
+    "summary": "Researchers introduced HybridAgent, a framework featuring a lightweight toggle that switches mid-generation between silent latent reasoning and text-based tool execution. The approach achieves a 10.4% performance gain over standard frontier LLM agents across 11 benchmarks while significantly reducing token consumption and inference latency.",
+    "url": "https://aiweekly.co/alerts/hybridagent-toggles-latent-reasoning-with-tools-cuts-cost-37x"
+  },
+  {
     "title": "UltraBERT: One Encoder for Classification and Retrieval",
     "summary": "Researchers released UltraBERT, a new family of English encoders featuring native 32K context lengths and a decoupled dual-head architecture that overcomes the historical trade-off between classification and retrieval performance. The release includes pre-trained encoders at 150M and 380M parameters alongside an embedder model that scores top marks on MTEB.",
     "url": "https://ofia-docs.france-ioi.org/huggingface/blog/dmis-lab/ultrabert"
@@ -28,10 +33,5 @@
     "title": "StepFun Step 5 Preview: 600B MoE Model with 1M Context and Vision Released for Free Preview · AIDev.news",
     "summary": "StepFun has launched Step 5 Preview, a sparse Mixture-of-Experts model featuring 600 billion total parameters, 27 billion active parameters, vision support, and a 1-million-token context window. The model matches GPT-6 Luna with a 33.89 score on the Hermes Index and is available for free evaluation via Nous Portal for one week ahead of an open-weights release scheduled for October 15, 2026.",
     "url": "https://www.aidev.news/article/stepfun-step-5-preview-600b-moe-model-with-1m-context-and-vision-released-for-free-preview"
-  },
-  {
-    "title": "OpenAI Opens Agents API Public Beta: Codex Harness as a Service",
-    "summary": "OpenAI has launched its Agents API in public beta, making the agent harness powering Codex available as a managed service without extra platform fees. The API includes native context compaction, tool search, programmatic tool calling, and subagent delegation across nine partner execution sandboxes. OpenAI has also made the underlying orchestration harness open source for developers to inspect and adapt.",
-    "url": "https://diffvibe.com/articles/openai-opens-agents-api-public-beta-codex-harness-as-a-service-1c2b0156"
   }
 ]
