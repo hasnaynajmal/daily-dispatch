@@ -1,5 +1,10 @@
 [
   {
+    "title": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date | Meta AI Research",
+    "summary": "Meta has released Muse Spark Open, an 816B-parameter multimodal mixture-of-experts model featuring a 1M-token context window and optimized for agentic coding. The model supports text, image, video, and audio inputs, and is available for local deployment on Apple Silicon via MLX as well as major serving engines like vLLM and SGLang.",
+    "url": "https://research.meta.ai/blog/muse-spark-open"
+  },
+  {
     "title": "HybridAgent toggles latent reasoning with tools, cuts cost 3.7x | AI Weekly",
     "summary": "Researchers introduced HybridAgent, a framework featuring a lightweight toggle that switches mid-generation between silent latent reasoning and text-based tool execution. The approach achieves a 10.4% performance gain over standard frontier LLM agents across 11 benchmarks while significantly reducing token consumption and inference latency.",
     "url": "https://aiweekly.co/alerts/hybridagent-toggles-latent-reasoning-with-tools-cuts-cost-37x"
@@ -28,10 +33,5 @@
     "title": "Tsinghua Shenzhen releases VeriLoop E2, a 27B model with evidence-governed reasoning for code and science – FreeLLM",
     "summary": "Tsinghua University's Shenzhen International Graduate School has released VeriLoop E2, an open-weight 27-billion parameter model licensed under Apache 2.0 for software engineering, mathematics, and physics. The system introduces VeriLoop-Governed Recurrence, separating candidate generation from deterministic external verification so reasoning progress is retained only when evidence improves. Compatible with vLLM serving, the model supports a 262K context window and scores 76.2% on SWE-bench Pro alongside 98.3% on AIME 2026.",
     "url": "https://freellm.vip/news/tsinghua-shenzhen-releases-veriloop-e2-a-27b-model-with-evidence-governed-reasoning-for-code-and-science"
-  },
-  {
-    "title": "StepFun Step 5 Preview: 600B MoE Model with 1M Context and Vision Released for Free Preview · AIDev.news",
-    "summary": "StepFun has launched Step 5 Preview, a sparse Mixture-of-Experts model featuring 600 billion total parameters, 27 billion active parameters, vision support, and a 1-million-token context window. The model matches GPT-6 Luna with a 33.89 score on the Hermes Index and is available for free evaluation via Nous Portal for one week ahead of an open-weights release scheduled for October 15, 2026.",
-    "url": "https://www.aidev.news/article/stepfun-step-5-preview-600b-moe-model-with-1m-context-and-vision-released-for-free-preview"
   }
 ]
