@@ -1,5 +1,10 @@
 [
   {
+    "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+    "summary": "Reflection has released Beam, an open-weight 501B parameter sparse Mixture-of-Experts model featuring a 1M-token context window, hybrid attention, and native support across major inference engines like vLLM and SGLang. Released under the Apache 2.0 license, the model is tailored for advanced coding, reasoning, and agentic workflows.",
+    "url": "https://huggingface.co/blog/reflection-beam"
+  },
+  {
     "title": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date | Meta AI Research",
     "summary": "Meta has released Muse Spark Open, an 816B-parameter multimodal mixture-of-experts model featuring a 1M-token context window and optimized for agentic coding. The model supports text, image, video, and audio inputs, and is available for local deployment on Apple Silicon via MLX as well as major serving engines like vLLM and SGLang.",
     "url": "https://research.meta.ai/blog/muse-spark-open"
@@ -28,10 +33,5 @@
     "title": "Meta Releases Llama 4 Scout: Frontier Open-Weights Mixture-of-Depths Architecture with Native 1M-Token Context Window",
     "summary": "Meta FAIR has released Llama 4 Scout, a 105B total parameter model utilizing dynamic Mixture-of-Depths routing with 24B active parameters per token. It supports a native 1M-token context window with zero RoPE-frequency degradation and is available on Hugging Face with native runtime integration.",
     "url": "https://dev.to/techboss/meta-releases-llama-4-scout-frontier-open-weights-mixture-of-depths-architecture-with-native-cgl"
-  },
-  {
-    "title": "Tsinghua Shenzhen releases VeriLoop E2, a 27B model with evidence-governed reasoning for code and science – FreeLLM",
-    "summary": "Tsinghua University's Shenzhen International Graduate School has released VeriLoop E2, an open-weight 27-billion parameter model licensed under Apache 2.0 for software engineering, mathematics, and physics. The system introduces VeriLoop-Governed Recurrence, separating candidate generation from deterministic external verification so reasoning progress is retained only when evidence improves. Compatible with vLLM serving, the model supports a 262K context window and scores 76.2% on SWE-bench Pro alongside 98.3% on AIME 2026.",
-    "url": "https://freellm.vip/news/tsinghua-shenzhen-releases-veriloop-e2-a-27b-model-with-evidence-governed-reasoning-for-code-and-science"
   }
 ]
