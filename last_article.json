@@ -1,5 +1,10 @@
 [
   {
+    "title": "InclusionAI Launches Ling-3.1-flash Open Source MoE Model for Agentic Workflows",
+    "summary": "InclusionAI has released Ling-3.1-flash, a 560B total parameter hybrid reasoning MoE model optimized for agentic tasks like software engineering and UI prototyping. It features a 1 million token context window, uses 25B active parameters per token, and has day-zero support in inference stacks like SGLang and vLLM.",
+    "url": "https://thenextgentechinsider.com/pulse/inclusionai-launches-ling-31-flash-open-source-moe-model-for-agentic-workflows"
+  },
+  {
     "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
     "summary": "Reflection has released Beam, an open-weight 501B parameter sparse Mixture-of-Experts model featuring a 1M-token context window, hybrid attention, and native support across major inference engines like vLLM and SGLang. Released under the Apache 2.0 license, the model is tailored for advanced coding, reasoning, and agentic workflows.",
     "url": "https://huggingface.co/blog/reflection-beam"
@@ -28,10 +33,5 @@
     "title": "Nvidia releases Kumo Tabular, an open foundation model for tabular prediction",
     "summary": "Nvidia has released Kumo Tabular, an open foundation model for tabular data that performs zero-shot classification and regression in a single forward pass without the need for manual feature engineering or retraining. Available on Hugging Face under an open commercial license, the Transformer-based models leverage column, row, and in-context attention to bypass traditional gradient-boosted tree workflows. Evaluations show it ranking competitively on major tabular benchmarks while offering substantial inference speedups.",
     "url": "https://bytejournal.org/news/2026-10-12-nvidia-releases-kumo-tabular-an-open-foundation-model-for-tabular-pred/"
-  },
-  {
-    "title": "Meta Releases Llama 4 Scout: Frontier Open-Weights Mixture-of-Depths Architecture with Native 1M-Token Context Window",
-    "summary": "Meta FAIR has released Llama 4 Scout, a 105B total parameter model utilizing dynamic Mixture-of-Depths routing with 24B active parameters per token. It supports a native 1M-token context window with zero RoPE-frequency degradation and is available on Hugging Face with native runtime integration.",
-    "url": "https://dev.to/techboss/meta-releases-llama-4-scout-frontier-open-weights-mixture-of-depths-architecture-with-native-cgl"
   }
 ]
