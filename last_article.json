@@ -1,5 +1,10 @@
 [
   {
+    "title": "NVIDIA Releases Nemotron 3.5 Super VL with 120B Parameters and 1M Context Window",
+    "summary": "NVIDIA released Nemotron 3.5 Super VL, an open-weights 120B MoE vision-language model with a 1-million-token context window. The model integrates interleaved Mamba-2 state space layers and a C-RADIO vision encoder, supporting full-precision BF16 and quantized NVFP4 formats under the OpenMDW-1.1 license.",
+    "url": "https://www.llms.blog/posts/nvidia-releases-nemotron-3-5-super-vl-with-120b-parameters-and-1m-context-window"
+  },
+  {
     "title": "InclusionAI Launches Ling-3.1-flash Open Source MoE Model for Agentic Workflows",
     "summary": "InclusionAI has released Ling-3.1-flash, a 560B total parameter hybrid reasoning MoE model optimized for agentic tasks like software engineering and UI prototyping. It features a 1 million token context window, uses 25B active parameters per token, and has day-zero support in inference stacks like SGLang and vLLM.",
     "url": "https://thenextgentechinsider.com/pulse/inclusionai-launches-ling-31-flash-open-source-moe-model-for-agentic-workflows"
@@ -28,10 +33,5 @@
     "title": "Introducing Superfluid: the local-AI native LLM server for multi-agent inference - DEV Community",
     "summary": "Superfluid is a new open-source (Apache-2.0) local LLM inference server built specifically for running multiple agent workloads concurrently on a single machine. It features preemption for interactive chat requests, zero-loss logging to survive worker crashes, shared prompt caching, and multi-device private fleet networking.",
     "url": "https://dev.to/prabod_bc/introducing-superfluid-the-local-ai-native-llm-server-for-multi-agent-inference-26mh"
-  },
-  {
-    "title": "Nvidia releases Kumo Tabular, an open foundation model for tabular prediction",
-    "summary": "Nvidia has released Kumo Tabular, an open foundation model for tabular data that performs zero-shot classification and regression in a single forward pass without the need for manual feature engineering or retraining. Available on Hugging Face under an open commercial license, the Transformer-based models leverage column, row, and in-context attention to bypass traditional gradient-boosted tree workflows. Evaluations show it ranking competitively on major tabular benchmarks while offering substantial inference speedups.",
-    "url": "https://bytejournal.org/news/2026-10-12-nvidia-releases-kumo-tabular-an-open-foundation-model-for-tabular-pred/"
   }
 ]
