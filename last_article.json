@@ -1,5 +1,10 @@
 [
   {
+    "title": "Announcing Humming: Fast, Flexible Kernels for Quantized Inference",
+    "summary": "Ant Group and the vLLM community have open-sourced Humming, a high-performance kernel library for quantized inference that supports NVIDIA architectures from Turing onward as well as T-Head's Zhenwu 810E. The library decouples quantization descriptions from execution, providing a unified architecture across diverse integer and floating-point formats to significantly outperform existing implementations like vLLM Marlin and DeepGEMM.",
+    "url": "https://vllm.ai/blog/2026-10-21-humming"
+  },
+  {
     "title": "llm-d 1.0 Advances Open, Cost-Efficient AI Inference for Production Scale",
     "summary": "IBM announced the release of llm-d 1.0, an open framework aimed at advancing cost-efficient and scalable AI inference for production environments. The release focuses on improving execution efficiency and deployment economics for large-scale language model systems.",
     "url": "https://newsroom.ibm.com/2026-10-20-llm-d-1-0-advances-open,-cost-efficient-ai-inference-for-production-scale"
@@ -28,10 +33,5 @@
     "title": "HybridAgent toggles latent reasoning with tools, cuts cost 3.7x | AI Weekly",
     "summary": "Researchers introduced HybridAgent, a framework featuring a lightweight toggle that switches mid-generation between silent latent reasoning and text-based tool execution. The approach achieves a 10.4% performance gain over standard frontier LLM agents across 11 benchmarks while significantly reducing token consumption and inference latency.",
     "url": "https://aiweekly.co/alerts/hybridagent-toggles-latent-reasoning-with-tools-cuts-cost-37x"
-  },
-  {
-    "title": "UltraBERT: One Encoder for Classification and Retrieval",
-    "summary": "Researchers released UltraBERT, a new family of English encoders featuring native 32K context lengths and a decoupled dual-head architecture that overcomes the historical trade-off between classification and retrieval performance. The release includes pre-trained encoders at 150M and 380M parameters alongside an embedder model that scores top marks on MTEB.",
-    "url": "https://ofia-docs.france-ioi.org/huggingface/blog/dmis-lab/ultrabert"
   }
 ]
