@@ -1,5 +1,10 @@
 [
   {
+    "title": "vLLM Delivers Day-0 Support for MiniMax-M3.1-Flash",
+    "summary": "vLLM has introduced day-0 support for the MiniMax-M3.1-Flash model across NVIDIA Blackwell, Rubin, and AMD MI350-series GPUs. The update includes optimized kernels for NVFP4 KV caches and MoE weights, indexer decode context parallelism, and FlashInfer backend integration to boost inference efficiency for agentic workloads.",
+    "url": "https://vllm.ai/blog/2026-10-23-minimax-m31-flash"
+  },
+  {
     "title": "Mistral releases Large 4, a 1.05T-parameter open-weight model",
     "summary": "Mistral has released Mistral Large 4, an open-weight multimodal mixture-of-experts model featuring 1.05 trillion total parameters, 52 billion active parameters, a 1.6-billion-parameter vision encoder, and a 1-million-token context window. The model is currently available in public preview with competitive pricing for input and output tokens.",
     "url": "https://aibriefs.news/briefing/2026-10-22"
@@ -28,10 +33,5 @@
     "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
     "summary": "Reflection has released Beam, an open-weight 501B parameter sparse Mixture-of-Experts model featuring a 1M-token context window, hybrid attention, and native support across major inference engines like vLLM and SGLang. Released under the Apache 2.0 license, the model is tailored for advanced coding, reasoning, and agentic workflows.",
     "url": "https://huggingface.co/blog/reflection-beam"
-  },
-  {
-    "title": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date | Meta AI Research",
-    "summary": "Meta has released Muse Spark Open, an 816B-parameter multimodal mixture-of-experts model featuring a 1M-token context window and optimized for agentic coding. The model supports text, image, video, and audio inputs, and is available for local deployment on Apple Silicon via MLX as well as major serving engines like vLLM and SGLang.",
-    "url": "https://research.meta.ai/blog/muse-spark-open"
   }
 ]
