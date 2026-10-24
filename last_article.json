@@ -1,5 +1,10 @@
 [
   {
+    "title": "DataKernelBench: Can LLMs Optimize Database Queries on GPUs?",
+    "summary": "IBM Research introduces DataKernelBench, a benchmark translating SQL into validated PyTorch TorchPlan programs to evaluate LLMs on optimizing database-style operators in CUDA or Triton. The strongest full-query CUDA configuration achieved a 2.11x speedup over torch.compile, demonstrating that higher-performing implementations leverage kernel fusion and execution-strategy changes.",
+    "url": "https://research.ibm.com/publications/datakernelbench-can-llms-optimize-database-queries-on-gpus"
+  },
+  {
     "title": "vLLM Delivers Day-0 Support for MiniMax-M3.1-Flash",
     "summary": "vLLM has introduced day-0 support for the MiniMax-M3.1-Flash model across NVIDIA Blackwell, Rubin, and AMD MI350-series GPUs. The update includes optimized kernels for NVFP4 KV caches and MoE weights, indexer decode context parallelism, and FlashInfer backend integration to boost inference efficiency for agentic workloads.",
     "url": "https://vllm.ai/blog/2026-10-23-minimax-m31-flash"
@@ -28,10 +33,5 @@
     "title": "InclusionAI Launches Ling-3.1-flash Open Source MoE Model for Agentic Workflows",
     "summary": "InclusionAI has released Ling-3.1-flash, a 560B total parameter hybrid reasoning MoE model optimized for agentic tasks like software engineering and UI prototyping. It features a 1 million token context window, uses 25B active parameters per token, and has day-zero support in inference stacks like SGLang and vLLM.",
     "url": "https://thenextgentechinsider.com/pulse/inclusionai-launches-ling-31-flash-open-source-moe-model-for-agentic-workflows"
-  },
-  {
-    "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
-    "summary": "Reflection has released Beam, an open-weight 501B parameter sparse Mixture-of-Experts model featuring a 1M-token context window, hybrid attention, and native support across major inference engines like vLLM and SGLang. Released under the Apache 2.0 license, the model is tailored for advanced coding, reasoning, and agentic workflows.",
-    "url": "https://huggingface.co/blog/reflection-beam"
   }
 ]
