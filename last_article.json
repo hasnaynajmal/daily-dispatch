@@ -1,5 +1,10 @@
 [
   {
+    "title": "Tencent Hy-Nomas: an open interactive video world model",
+    "summary": "Tencent Hy has released Hy-Nomas, an open-weight interactive video world model under the Apache-2.0 license. The model allows users to steer video generation segment-by-segment using text instructions and camera trajectories, featuring a persistent KV cache for consistency and capable of running on a single consumer GPU.",
+    "url": "https://www.neuraldaily.news/en/a/tencent-hy-nomas-open-interactive-video-world-model"
+  },
+  {
     "title": "DataKernelBench: Can LLMs Optimize Database Queries on GPUs?",
     "summary": "IBM Research introduces DataKernelBench, a benchmark translating SQL into validated PyTorch TorchPlan programs to evaluate LLMs on optimizing database-style operators in CUDA or Triton. The strongest full-query CUDA configuration achieved a 2.11x speedup over torch.compile, demonstrating that higher-performing implementations leverage kernel fusion and execution-strategy changes.",
     "url": "https://research.ibm.com/publications/datakernelbench-can-llms-optimize-database-queries-on-gpus"
@@ -28,10 +33,5 @@
     "title": "NVIDIA Releases Nemotron 3.5 Super VL with 120B Parameters and 1M Context Window",
     "summary": "NVIDIA released Nemotron 3.5 Super VL, an open-weights 120B MoE vision-language model with a 1-million-token context window. The model integrates interleaved Mamba-2 state space layers and a C-RADIO vision encoder, supporting full-precision BF16 and quantized NVFP4 formats under the OpenMDW-1.1 license.",
     "url": "https://www.llms.blog/posts/nvidia-releases-nemotron-3-5-super-vl-with-120b-parameters-and-1m-context-window"
-  },
-  {
-    "title": "InclusionAI Launches Ling-3.1-flash Open Source MoE Model for Agentic Workflows",
-    "summary": "InclusionAI has released Ling-3.1-flash, a 560B total parameter hybrid reasoning MoE model optimized for agentic tasks like software engineering and UI prototyping. It features a 1 million token context window, uses 25B active parameters per token, and has day-zero support in inference stacks like SGLang and vLLM.",
-    "url": "https://thenextgentechinsider.com/pulse/inclusionai-launches-ling-31-flash-open-source-moe-model-for-agentic-workflows"
   }
 ]
