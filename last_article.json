@@ -1,5 +1,10 @@
 [
   {
+    "title": "OpenAI Introduces GPT-6.1 Terra AI Model With Cost Efficiency, Software Engineering Capabilities Improvements Over GPT-5.6 Terra",
+    "summary": "OpenAI has announced GPT-6.1 Terra, a new AI model offering improved communication, visual reasoning, and computer-use capabilities alongside 50 percent lower standard API pricing than its predecessor, GPT-5.6 Terra. The model is accessible to developers via the OpenAI API and features enhanced software engineering performance and stronger resistance to malicious prompts.",
+    "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-1-terra-ai-model-announced-pricing-availability-capabilities-12242058"
+  },
+  {
     "title": "Nanbeige ships an open 33B coder with 512K context",
     "summary": "The Nanbeige team released Nanbeige4.3-33B under the Apache 2.0 license, featuring a 512K context window and agentic coding capabilities. The dense 33B parameter model allows builders to run, modify, and fine-tune it locally on their own hardware.",
     "url": "https://topfive.ai/2026/10/26/nanbeige-4-3-33b-open-coding-model-apache/"
@@ -28,10 +33,5 @@
     "title": "Announcing Humming: Fast, Flexible Kernels for Quantized Inference",
     "summary": "Ant Group and the vLLM community have open-sourced Humming, a high-performance kernel library for quantized inference that supports NVIDIA architectures from Turing onward as well as T-Head's Zhenwu 810E. The library decouples quantization descriptions from execution, providing a unified architecture across diverse integer and floating-point formats to significantly outperform existing implementations like vLLM Marlin and DeepGEMM.",
     "url": "https://vllm.ai/blog/2026-10-21-humming"
-  },
-  {
-    "title": "llm-d 1.0 Advances Open, Cost-Efficient AI Inference for Production Scale",
-    "summary": "IBM announced the release of llm-d 1.0, an open framework aimed at advancing cost-efficient and scalable AI inference for production environments. The release focuses on improving execution efficiency and deployment economics for large-scale language model systems.",
-    "url": "https://newsroom.ibm.com/2026-10-20-llm-d-1-0-advances-open,-cost-efficient-ai-inference-for-production-scale"
   }
 ]
