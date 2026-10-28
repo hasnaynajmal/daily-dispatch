@@ -1,5 +1,10 @@
 [
   {
+    "title": "Clover-35B-A3B: DiffuSpace releases open-source 35-billion-parameter diffusion language model",
+    "summary": "DiffuSpace has released Clover-35B-A3B-Preview under the Apache 2.0 license, a 35-billion-parameter block diffusion language model with a mixture-of-experts architecture. Derived from Qwen3.6-35B-A3B with a bidirectional Gated DeltaNet mechanism, it generates text via parallel diffusion rather than token-by-token autoregression, claiming high throughput speeds on single hardware accelerators.",
+    "url": "https://neuralbrew.ai/en/articles/2026/10/clover-35b-a3b-diffuspace-open-source-diffusion-language-model/"
+  },
+  {
     "title": "OpenAI Introduces GPT-6.1 Terra AI Model With Cost Efficiency, Software Engineering Capabilities Improvements Over GPT-5.6 Terra",
     "summary": "OpenAI has announced GPT-6.1 Terra, a new AI model offering improved communication, visual reasoning, and computer-use capabilities alongside 50 percent lower standard API pricing than its predecessor, GPT-5.6 Terra. The model is accessible to developers via the OpenAI API and features enhanced software engineering performance and stronger resistance to malicious prompts.",
     "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-1-terra-ai-model-announced-pricing-availability-capabilities-12242058"
@@ -28,10 +33,5 @@
     "title": "Mistral releases Large 4, a 1.05T-parameter open-weight model",
     "summary": "Mistral has released Mistral Large 4, an open-weight multimodal mixture-of-experts model featuring 1.05 trillion total parameters, 52 billion active parameters, a 1.6-billion-parameter vision encoder, and a 1-million-token context window. The model is currently available in public preview with competitive pricing for input and output tokens.",
     "url": "https://aibriefs.news/briefing/2026-10-22"
-  },
-  {
-    "title": "Announcing Humming: Fast, Flexible Kernels for Quantized Inference",
-    "summary": "Ant Group and the vLLM community have open-sourced Humming, a high-performance kernel library for quantized inference that supports NVIDIA architectures from Turing onward as well as T-Head's Zhenwu 810E. The library decouples quantization descriptions from execution, providing a unified architecture across diverse integer and floating-point formats to significantly outperform existing implementations like vLLM Marlin and DeepGEMM.",
-    "url": "https://vllm.ai/blog/2026-10-21-humming"
   }
 ]
