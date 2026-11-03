@@ -1,5 +1,10 @@
 [
   {
+    "title": "Deep Principle releases Hydrogen-1.0, a 753B open-weight MoE model for autonomous scientific discovery",
+    "summary": "Deep Principle has released Hydrogen-1.0, an open-weight 753-billion parameter Mixture-of-Experts model designed for scientific discovery in fields like chemistry and life sciences. Built by post-training Z.ai's GLM-5.3 on real electronic lab records and agent trajectories, it is made available under a permissive MIT license.",
+    "url": "https://freellm.vip/news/deep-principle-releases-hydrogen-1-0-a-753b-open-weight-moe-model-for-autonomous-scientific-discovery"
+  },
+  {
     "title": "Mistral Releases Open-Source Weights for Large 4 AI Model with 1 Trillion Parameters",
     "summary": "Mistral AI has released the open-weights version of its 1.05-terabyte mixture-of-experts model, Large 4 (Le Chonk), supporting up to 1 million tokens in context across 160 languages. Distributed under the Mistral Ecosystem Open-Weight license, the model features specialized enhancements for agentic coding, cybersecurity, and reasoning tasks.",
     "url": "https://forklog.com/en/mistral-releases-open-source-weights-for-large-4-ai-model-with-1-trillion-parameters/"
@@ -28,10 +33,5 @@
     "title": "Tencent Hy-Nomas: an open interactive video world model",
     "summary": "Tencent Hy has released Hy-Nomas, an open-weight interactive video world model under the Apache-2.0 license. The model allows users to steer video generation segment-by-segment using text instructions and camera trajectories, featuring a persistent KV cache for consistency and capable of running on a single consumer GPU.",
     "url": "https://www.neuraldaily.news/en/a/tencent-hy-nomas-open-interactive-video-world-model"
-  },
-  {
-    "title": "DataKernelBench: Can LLMs Optimize Database Queries on GPUs?",
-    "summary": "IBM Research introduces DataKernelBench, a benchmark translating SQL into validated PyTorch TorchPlan programs to evaluate LLMs on optimizing database-style operators in CUDA or Triton. The strongest full-query CUDA configuration achieved a 2.11x speedup over torch.compile, demonstrating that higher-performing implementations leverage kernel fusion and execution-strategy changes.",
-    "url": "https://research.ibm.com/publications/datakernelbench-can-llms-optimize-database-queries-on-gpus"
   }
 ]
