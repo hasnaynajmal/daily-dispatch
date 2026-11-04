@@ -1,5 +1,10 @@
 [
   {
+    "title": "Tencent Launches Hy4, Joining the Ranks of the World's Leading Open-Source AI Models",
+    "summary": "Tencent has released Hy4, its latest open-source AI model featuring native vision capabilities, computer-use support, and major performance gains across long-context and long-horizon tasks. The model is available via Tencent Cloud and OpenRouter, with upcoming model weights and system cards planned for the open-source community.",
+    "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
+  },
+  {
     "title": "Deep Principle releases Hydrogen-1.0, a 753B open-weight MoE model for autonomous scientific discovery",
     "summary": "Deep Principle has released Hydrogen-1.0, an open-weight 753-billion parameter Mixture-of-Experts model designed for scientific discovery in fields like chemistry and life sciences. Built by post-training Z.ai's GLM-5.3 on real electronic lab records and agent trajectories, it is made available under a permissive MIT license.",
     "url": "https://freellm.vip/news/deep-principle-releases-hydrogen-1-0-a-753b-open-weight-moe-model-for-autonomous-scientific-discovery"
@@ -28,10 +33,5 @@
     "title": "Nanbeige ships an open 33B coder with 512K context",
     "summary": "The Nanbeige team released Nanbeige4.3-33B under the Apache 2.0 license, featuring a 512K context window and agentic coding capabilities. The dense 33B parameter model allows builders to run, modify, and fine-tune it locally on their own hardware.",
     "url": "https://topfive.ai/2026/10/26/nanbeige-4-3-33b-open-coding-model-apache/"
-  },
-  {
-    "title": "Tencent Hy-Nomas: an open interactive video world model",
-    "summary": "Tencent Hy has released Hy-Nomas, an open-weight interactive video world model under the Apache-2.0 license. The model allows users to steer video generation segment-by-segment using text instructions and camera trajectories, featuring a persistent KV cache for consistency and capable of running on a single consumer GPU.",
-    "url": "https://www.neuraldaily.news/en/a/tencent-hy-nomas-open-interactive-video-world-model"
   }
 ]
