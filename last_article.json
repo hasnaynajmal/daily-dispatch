@@ -1,5 +1,10 @@
 [
   {
+    "title": "Moonshot AI releases Kimi K3.1 Pro model weights",
+    "summary": "Moonshot AI has made the model weights for its Kimi K3.1 Pro flagship multimodal model available on Hugging Face for independent deployment. The mixture-of-experts model features 2.8 trillion total parameters, approximately 104 billion active parameters, and a 1-million-token context window.",
+    "url": "https://technode.com/2026/11/05/moonshot-ai-releases-kimi-k3-1-pro-model-weights/"
+  },
+  {
     "title": "Tencent Launches Hy4, Joining the Ranks of the World's Leading Open-Source AI Models",
     "summary": "Tencent has released Hy4, its latest open-source AI model featuring native vision capabilities, computer-use support, and major performance gains across long-context and long-horizon tasks. The model is available via Tencent Cloud and OpenRouter, with upcoming model weights and system cards planned for the open-source community.",
     "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
@@ -28,10 +33,5 @@
     "title": "OpenAI Introduces GPT-6.1 Terra AI Model With Cost Efficiency, Software Engineering Capabilities Improvements Over GPT-5.6 Terra",
     "summary": "OpenAI has announced GPT-6.1 Terra, a new AI model offering improved communication, visual reasoning, and computer-use capabilities alongside 50 percent lower standard API pricing than its predecessor, GPT-5.6 Terra. The model is accessible to developers via the OpenAI API and features enhanced software engineering performance and stronger resistance to malicious prompts.",
     "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-1-terra-ai-model-announced-pricing-availability-capabilities-12242058"
-  },
-  {
-    "title": "Nanbeige ships an open 33B coder with 512K context",
-    "summary": "The Nanbeige team released Nanbeige4.3-33B under the Apache 2.0 license, featuring a 512K context window and agentic coding capabilities. The dense 33B parameter model allows builders to run, modify, and fine-tune it locally on their own hardware.",
-    "url": "https://topfive.ai/2026/10/26/nanbeige-4-3-33b-open-coding-model-apache/"
   }
 ]
