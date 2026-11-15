@@ -18,9 +18,11 @@ def _get_gemini_client() -> genai.Client:
         max_delay=60,
         http_status_codes=[429, 500, 503, 504],
     )
+    # Pin v1beta: google-genai 3.x defaults to v1, which lacks the `-latest`
+    # model aliases and structured-output (response_schema) support.
     return genai.Client(
         api_key=os.environ["GEMINI_API_KEY"],
-        http_options=types.HttpOptions(retry_options=retry),
+        http_options=types.HttpOptions(api_version="v1beta", retry_options=retry),
     )
 
 
